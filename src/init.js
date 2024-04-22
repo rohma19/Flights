@@ -1,1 +1,4 @@
-console.log('Let us build a tod list');
+
+import loadEvent from './events/loadEvent.js';
+
+loadEvent();

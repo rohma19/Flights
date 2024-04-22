@@ -1,12 +1,57 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #5a5353;
-    color: whitesmoke;
+  font-family: Arial, sans-serif;
+}
+
+/* Center the container */
+#container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Style the table */
+#flight-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the table header */
+#flight-table thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#flight-table th {
+  padding: 15px;
+  text-align: left;
+}
+
+/* Style the table body */
+#flight-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#flight-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style the image container */
+.imgContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imgContainer img {
+  max-width: 100%;
+  height: auto;
 }

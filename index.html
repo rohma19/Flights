@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles/style.css" />
-        <title>Todo list</title>
-    </head>
-    <body>
-        <script type="module" src="./src/init.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="imgContainer">
+        <img src="./assets/flight.jpeg" alt="flight" />
+    </div>
+    <div id="container">
+        <table id="flight-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Plane</th>
+                    <th>Departure Date</th>
+                    <th>Origin</th>
+                    <th>Arrival Date</th>
+                    <th>Destination</th>
+                    <th>Stops</th>
+                </tr>
+            </thead>
+            <tbody id="flight-table-body">
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script type="module" src="./src/init.js"></script>
+</body>
 </html>

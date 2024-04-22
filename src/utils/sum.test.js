@@ -1,13 +1,35 @@
-import sum from './sum.js';
+import sortFlights from './sortFlights.js';
 
-describe('sum of two numbers', () => {
-    test(' 1 + 2 -> 3', () => {
-        const actual = sum(1, 2);
-        expect(actual).toBe(3);
-    });
+describe('sortFlights function', () => {
+  it('should sort flights by departure date in ascending order', () => {
+    const unsortedFlights = [
+      { flightNumber: 'ABC123', departureDate: '2024-04-25T12:00:00' },
+      { flightNumber: 'XYZ456', departureDate: '2024-04-24T08:30:00' },
+      { flightNumber: 'DEF789', departureDate: '2024-04-26T15:45:00' },
+    ];
 
-    test(' 10 + 2 -> 12', () => {
-        const actual = sum(10, 2);
-        expect(actual).toBe(12);
-    });
+    const expectedSortedFlights = [
+      { flightNumber: 'XYZ456', departureDate: '2024-04-24T08:30:00' },
+      { flightNumber: 'ABC123', departureDate: '2024-04-25T12:00:00' },
+      { flightNumber: 'DEF789', departureDate: '2024-04-26T15:45:00' },
+    ];
+
+    const sortedFlights = sortFlights(unsortedFlights);
+
+    expect(sortedFlights).toEqual(expectedSortedFlights);
+  });
+
+  it('should return an empty array when input is empty', () => {
+    const unsortedFlights = [];
+    const sortedFlights = sortFlights(unsortedFlights);
+
+    expect(sortedFlights).toEqual([]);
+  });
+
+  it('should return the same array when input has only one flight', () => {
+    const unsortedFlights = [{ flightNumber: 'ABC123', departureDate: '2024-04-25T12:00:00' }];
+    const sortedFlights = sortFlights(unsortedFlights);
+
+    expect(sortedFlights).toEqual(unsortedFlights);
+  });
 });
