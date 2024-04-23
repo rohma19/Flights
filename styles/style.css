@@ -10,3 +10,25 @@ body {
     background-color: #5a5353;
     color: whitesmoke;
 }
+
+.flight-image{
+    height: 25rem;
+    width : 100%;
+
+    background-size: cover;
+}
+
+.flight-titles{
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+margin-top: 30px;
+padding: 0 20px;
+font-size: x-large;
+font-weight: bold;
+}
+.flight-title{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 30px;
+    padding: 0 20px;
+    }
