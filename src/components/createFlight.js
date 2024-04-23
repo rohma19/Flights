@@ -1,43 +1,36 @@
-const createFlight = (flightData) => {
-    // container
-    const flight = document.createElement('div');
-    flight.classList.add('flight');
+const createFlight = (flight) => {
+    const flightDom = document.createElement('div');
+    flightDom.className = 'flight-title';
 
-    // name
     const name = document.createElement('div');
-    name.classList.add('name');
-    name.innerText = flightData.name;
+    name.className = 'name';
+    name.innerText = flight.name;
 
-    // plane
     const plane = document.createElement('div');
-    plane.classList.add('plane');
-    plane.innerText = flightData.plane;
+    plane.className = 'plane';
+    plane.innerText = flight.plane;
 
-    // departureDate
     const departureDate = document.createElement('div');
-    departureDate.classList.add('departureDate');
-    departureDate.innerText = flightData.departureDate;
+    departureDate.className = 'departureDate';
+    departureDate.innerText = flight.departureDate;
 
-    // origin
     const origin = document.createElement('div');
-    origin.classList.add('origin');
-    origin.innerText = flightData.origin;
+    origin.className = 'origin';
+    origin.innerText = flight.origin;
 
-    // arrivalDate
     const arrivalDate = document.createElement('div');
-    arrivalDate.classList.add('arrivalDate');
-    arrivalDate.innerText = flightData.arrivalDate;
+    arrivalDate.className = 'arrivalDate';
+    arrivalDate.innerText = flight.arrivalDate;
 
-    // destination
     const destination = document.createElement('div');
-    destination.classList.add('destination');
-    destination.innerText = flightData.destination;
-    // stops
-    const stops = document.createElement('div');
-    stops.classList.add('stops');
-    stops.innerText = flightData.stops;
+    destination.className = 'destination';
+    destination.innerText = flight.destination;
 
-    flight.append(
+    const stops = document.createElement('div');
+    stops.className = 'stops';
+    stops.innerText = flight.stops;
+
+    flightDom.append(
         name,
         plane,
         departureDate,
@@ -47,7 +40,7 @@ const createFlight = (flightData) => {
         stops,
     );
 
-    return flight;
+    return flightDom;
 };
 
 export default createFlight;

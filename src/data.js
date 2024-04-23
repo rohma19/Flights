@@ -70,6 +70,16 @@ const data = {
             destination: 'CGP',
             stops: 10,
         },
+        {
+            id: 8,
+            name: 'KK-001',
+            plane: 'ATR001',
+            departureDate: '2023-08-31 13:45:00',
+            origin: 'DAC',
+            arrivalDate: '2023-08-30 15:40:00',
+            destination: 'CGP',
+            stops: 10,
+        },
     ],
 };
 

@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>Document</title>
-</head>
-<body>
-    <div class="imgContainer">
-        <img src="./assets/flight.jpeg" alt="flight" />
-    </div>
-    <div id="container">
-        <table id="flight-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Plane</th>
-                    <th>Departure Date</th>
-                    <th>Origin</th>
-                    <th>Arrival Date</th>
-                    <th>Destination</th>
-                    <th>Stops</th>
-                </tr>
-            </thead>
-            <tbody id="flight-table-body">
-                <!-- Table rows will be dynamically added here -->
-            </tbody>
-        </table>
-    </div>
-    <script type="module" src="./src/init.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <title>Flights</title>
+    </head>
+    <body>
+        <div class="img-container">
+            <img class="flight-image" src="./assets/airplane.jpeg" alt="flight-img">
+        </div>
+        <div id="parent">
+            <div class="flight-titles">
+               <div class="name">Name</div>
+               <div class="plane">Plane</div>
+               <div class="departure-date">Departure Date</div>
+               <div class="origin">Origin</div>
+               <div class="arrivalDate">Arrival Date</div>
+               <div class="destination">Destination</div>
+               <div class="stops">Stops</div>
+            </div>
+        </div>
+        <script type="module" src="./src/init.js"></script>
+    </body>
 </html>

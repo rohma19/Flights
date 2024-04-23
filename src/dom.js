@@ -1,5 +1,5 @@
 const dom = {
-  container: document.getElementById('container'),
+    parent: document.getElementById('parent'),
 };
 
 export default dom;

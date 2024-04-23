@@ -4,11 +4,10 @@ import sortFlights from '../utils/sortFlights.js';
 import createFlight from '../components/createFlight.js';
 
 const loadHandler = () => {
-    const sortedData = sortFlights(data.flights);
-
-    sortedData.forEach((flightData) => {
-        const flightDom = createFlight(flightData);
-        dom.container.append(flightDom);
+    const organisedFlights = sortFlights(data);
+    organisedFlights.forEach((flight) => {
+        const flightDom = createFlight(flight);
+        dom.parent.appendChild(flightDom);
     });
 };
 
